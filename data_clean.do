@@ -6,9 +6,9 @@ local DROPBOX "/Users/`c(username)'/Dropbox"
 //Setting path shortcuts
 
 local DROPBOX "/Users/`c(username)'/Dropbox"
-local localData "/Users/`c(username)'/Desktop/maya_dataproject"
+local Data "`DROPBOX'/maya_dataproject/epic_task_nadia/maya"
 
-import delimited using "`localData'/demographics.txt", clear
+import delimited using "`Data'/demographics.txt", clear
 tempfile working
 save `working', replace
 
@@ -28,4 +28,4 @@ replace state_string = substr(state_string,1,2)
 destring state_string, gen(state)
 drop state_string
 
-save "super_fund.dta", replace
+save "`DATA'/super_fund.dta", replace
