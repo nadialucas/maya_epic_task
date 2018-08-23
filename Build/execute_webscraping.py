@@ -10,7 +10,7 @@ if getpass.getuser()=="nadialucas":
 elif getpass.getuser()=="mayanorman":
     file_folder = r"/Users/mayanorman/Dropbox/epic_task_nadia/maya/RawData"
     chromedriver_path = r"/anaconda2/bin/chromedriver"
-files = ["demographics.txt","house_age.txt","house_chars1.txt","house_chars2.txt","house_type.txt"]
+files = ["demographics.txt","house_age.txt","house_chars1.txt","house_chars2.txt","house_type.txt", "sample82.txt"]
 data_url = "http://www.jasmiths.com/data_project"
 driverObj = ChromeDriver(file_folder, chromedriver_path, files, data_url)
 driverObj.get_data()
